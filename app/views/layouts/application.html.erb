@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snippets</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<!-- navigation -->
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="<%= snippets_path %>">Snippets</a>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "New Snippet", new_snippet_path %></li>
+        <li><%= link_to "All Snippets", snippets_path  %></li>
+        <li><%= link_to "Snippets by Kind", kinds_path  %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- end of navigation -->
+<%= yield %>
+
+</body>
+</html>

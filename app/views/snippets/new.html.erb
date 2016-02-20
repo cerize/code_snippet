@@ -1,0 +1,18 @@
+<h1>Create New Snippet</h1>
+
+<%= form_for @snippet do |f| %>
+  <div class="">
+    Kind: <%=  f.collection_select(:kind_id, Kind.all, :id, :name)%>
+  </div>
+  <br>
+  <div class="">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <div class="">
+    <%= f.label :work %>
+    <%= f.text_area :work, cols: 40, rows: 30 %>
+  </div>
+  <%= f.submit %>
+<% end %>

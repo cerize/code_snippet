@@ -1,0 +1,7 @@
+<h1>Snippets by Kind</h1>
+
+<%= link_to "Create a new Kind", new_kind_path %>
+
+<% @kinds.each do |kind| %>
+<%= link_to kind.name, kind_path(kind) %>
+<% end %>
